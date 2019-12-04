@@ -1,0 +1,58 @@
+table {
+	border: 1px solid black;
+	border-radius: 2px;
+	/*border-collapse: collapse;*/
+}
+
+td {
+	width: 20px;
+	height: 20px;
+	/*border: 1px solid black;*/
+	/*border: none;*/
+}
+
+body {
+	background: #f5f7f4;
+}
+
+.table-mini td {
+	height: 5px;
+	width: 5px;
+	border: none;
+}
+
+.table {
+	width: auto;
+}
+
+#field td {
+	border: 1px solid black;
+}
+
+.table td {
+	border-top: none;
+}
+
+.no-border {
+	border-collapse: collapse;
+}
+
+.ignore {
+	background: aliceblue;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.margin-10 {
+	margin: 10px;
+}
+
+#json-map {
+	width: auto;
+}

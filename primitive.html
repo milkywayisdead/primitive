@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>primitive</title>
+	
+	<link rel='stylesheet' href='bootstrap/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='spectrum/spectrum.css' />
+	<link rel="stylesheet" type="text/css" href="fa/css/all.css">
+
+</head>
+<body>
+	<div class='container'>
+
+		<nav>
+		  <div class="nav nav-tabs" id="workspace" role="tablist">
+		    <a class="nav-item nav-link active" id="editor-tab" data-toggle="tab" href="#editor" role="tab" aria-controls="editor" aria-selected="true">Редактор</a>
+		    <a class="nav-item nav-link" id="animation-tab" data-toggle="tab" href="#animation" role="tab" aria-controls="animation" aria-selected="false">Анимация</a>
+		  </div>
+		</nav>
+
+		<div class="tab-content" id="workspaceContent">
+			<div class="tab-pane fade show active" id="editor" role="tabpanel" aria-labelledby="editor-tab">
+				<div class='row'>
+
+					<div class='col'>
+						<table id="field" class='table'></table>
+						<div class='row'>
+							<div class='col'>
+								<button id='generate' type='button' class="btn btn-outline-dark" title='Генерировать json-карту'><i class='fas fa-image fa-2x'></i></button>
+								<button id='generate-from' type='button' class="btn btn-outline-dark" title='Построить изображение из json'><i class='far fa-image fa-2x'></i></button>
+								<button id='clear-field' type='button' class="btn btn-outline-dark" title='Очистить поле'><i class='fas fa-chalkboard fa-2x'></i></button>
+								<button id='add-sprite' type='button' class="btn btn-outline-dark" title='Добавить кадр'><i class='fas fa-plus-square fa-2x'></i></button>
+							</div>
+							
+						</div>							
+					</div>
+
+					<div class='col'>
+						<div class='row'>
+							<input type='text' id="mario-palette"/>
+
+							<div class="input-group ">
+							  <input type="text" id="hex-color" class="form-control" placeholder="#" >
+							  <div class="input-group-append">
+							    <button class="btn btn-outline-dark" type="button" id="set-color" title='Задать цвет'><i class='fas fa-check'></i></button>
+							  </div>
+							</div>
+							<textarea id='json-map' autocomplete='off'></textarea>	
+						</div>
+
+					</div>
+
+					<div class='col'>						
+					</div>
+
+				</div>
+			</div>
+
+
+			<div class="tab-pane fade" id="animation" role="tabpanel" aria-labelledby="animation-tab">
+				<div class='row'>
+					<div class='col '>
+						<table id="preview" class='table no-border'></table>
+						<button id='action' type='button' class="btn btn-outline-dark" title='Воспроизведение'><i class='fas fa-running fa-2x'></i></button>
+						<!-- <button id='next-sprite' type='button' class="btn btn-outline-dark" title='Следующий кадр'><i class='fas fa-walking fa-2x'></i></button> -->
+						<button id='stop' type='button' class="btn btn-outline-dark" title='Стоп'><i class='fas fa-male fa-2x'></i></button>
+						<button id='sprites-from-json' type='button' class="btn btn-outline-dark" title='Построить кадры по json'><i class='far fa-copy fa-2x'></i></button>
+						<button id='sprites-to-json' type='button' class="btn btn-outline-dark" title='Перенести кадры в json'><i class='fas fa-copy fa-2x'></i></button>
+						<br>
+						<label>Время между кадрами, мс</label><input type='text' id='speed'>
+					</div>
+					<div class='col'>
+						<div id='sprites' class='row'></div>
+					</div>
+
+					
+
+					<div class='col '>
+						<textarea id='sprites-json-map' autocomplete='off'></textarea>
+					</div>
+				</div>					
+			</div>			
+		</div>
+	</div>
+
+	<script src='jquery/jquery-3.4.1.min.js'></script>
+	<script src='bootstrap/js/bootstrap.min.js' type="text/javascript"></script>
+	<script src='spectrum/spectrum.js'></script>
+	<link rel='stylesheet' href='primitive.css' />
+	<script src='primitive.js' type="text/javascript"></script>
+	
+</body>
+</html>
